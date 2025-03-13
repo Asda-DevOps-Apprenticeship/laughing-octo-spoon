@@ -1,0 +1,5 @@
+---
+field_groups: field_group
+schemas: schema
+datasets: dataset
+namespaces: namespace

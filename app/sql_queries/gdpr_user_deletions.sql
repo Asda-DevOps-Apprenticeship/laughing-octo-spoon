@@ -1,0 +1,1 @@
+SELECT execution_date AS gdprdate, deletion_flag, COUNT (singl_profl_id ) AS cnt FROM custanwo.customer_transformation.gdpr_user_deletions GROUP BY 1,2 ORDER BY 1 DESC

@@ -1,0 +1,1 @@
+SELECT singl_profl_id, wallet_id, query_execution_date FROM custanwo.customer_transformation.cust_gdpr_table WHERE query_execution_date = CURRENT_DATE()

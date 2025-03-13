@@ -1,0 +1,61 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<!-- Flash Messages -->
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for category, message in messages %}
+            <div class="alert alert-{{ category }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+<!-- SPID Deletion Section -->
+<div class="container mt-5">
+    <h2>SPID Deletion Dashboard</h2>
+    <p>Total number of SPIDs that need to be deleted: <strong>{{ total_count }}</strong></p>
+
+    {% if total_count > 0 %}
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>GDPR Date</th>
+                <th>Number of SPIDs</th>
+                <th>Deletion Flag</th>
+                <th>Action</th> <!-- New column for the Delete button -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in spids_by_date %}
+            <tr>
+                <td>{{ row.gdprdate.strftime('%Y-%m-%d') }}</td>
+                <td>{{ row.cnt }}</td>
+                <td>{{ row.deletion_flag }}</td>
+                <td>
+                    <!-- Conditionally render the Delete button -->
+                    {% if not row.deletion_flag %}
+                    <form action="{{ url_for('execute_deletions') }}" method="POST" style="display: inline;">
+                        <input type="hidden" name="deletion_date" value="{{ row.gdprdate.strftime('%Y-%m-%d') }}">
+                        <button type="submit" class="btn btn-danger btn-sm">
+                            Delete
+                        </button>
+                    </form>
+                    {% else %}
+                    <button class="btn btn-secondary btn-sm" disabled>
+                        Delete
+                    </button>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <div class="alert alert-info" role="alert">
+        No SPIDs require deletion at this time.
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

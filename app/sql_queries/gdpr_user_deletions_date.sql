@@ -1,0 +1,1 @@
+SELECT singl_profl_id FROM custanwo.customer_transformation.gdpr_user_deletions  WHERE execution_date = '{delete_date}'

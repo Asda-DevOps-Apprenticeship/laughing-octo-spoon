@@ -1,0 +1,65 @@
+---
+field_groups:
+  url: 'https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups'
+  get_headers:
+    Accept: 'application/vnd.adobe.xed-id+json'
+    Content-Type: 'application/json'
+    Authorization: 'Bearer {{access_token}}'
+    x-api-key: '{{api_key}}'
+    x-gw-ims-org-id: '{{ims_org}}'
+    x-sandbox-name: '{{sandbox}}'
+  post_headers:
+    Accept: 'application/json'
+    Content-Type: 'application/json'
+    Authorization: 'Bearer {{access_token}}'
+    x-api-key: '{{api_key}}'
+    x-gw-ims-org-id: '{{ims_org}}'
+    x-sandbox-name: '{{sandbox}}'
+schemas:
+  url: 'https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas'
+  get_headers:
+    Accept: 'application/vnd.adobe.xed-id+json'
+    Content-Type: 'application/json'
+    Authorization: 'Bearer {{access_token}}'
+    x-api-key: '{{api_key}}'
+    x-gw-ims-org-id: '{{ims_org}}'
+    x-sandbox-name: '{{sandbox}}'
+  post_headers:
+    Accept: 'application/json'
+    Content-Type: 'application/json'
+    Authorization: 'Bearer {{access_token}}'
+    x-api-key: '{{api_key}}'
+    x-gw-ims-org-id: '{{ims_org}}'
+    x-sandbox-name: '{{sandbox}}'
+datasets:
+  url: 'https://platform.adobe.io/data/foundation/catalog/dataSets'
+  get_headers:
+    Accept: 'application/vnd.adobe.xed-id+json'
+    Content-Type: 'application/json'
+    Authorization: 'Bearer {{access_token}}'
+    x-api-key: '{{api_key}}'
+    x-gw-ims-org-id: '{{ims_org}}'
+    x-sandbox-name: '{{sandbox}}'
+  post_headers:
+    Accept: 'application/json'
+    Content-Type: 'application/json'
+    Authorization: 'Bearer {{access_token}}'
+    x-api-key: '{{api_key}}'
+    x-gw-ims-org-id: '{{ims_org}}'
+    x-sandbox-name: '{{sandbox}}'
+namespaces:
+  url: 'https://platform.adobe.io/data/core/idnamespace/identities'
+  get_headers:
+    Accept: 'application/vnd.adobe.xed-id+json'
+    Content-Type: 'application/json'
+    Authorization: 'Bearer {{access_token}}'
+    x-api-key: '{{api_key}}'
+    x-gw-ims-org-id: '{{ims_org}}'
+    x-sandbox-name: '{{sandbox}}'
+  post_headers:
+    Accept: 'application/json'
+    Content-Type: 'application/json'
+    Authorization: 'Bearer {{access_token}}'
+    x-api-key: '{{api_key}}'
+    x-gw-ims-org-id: '{{ims_org}}'
+    x-sandbox-name: '{{sandbox}}'

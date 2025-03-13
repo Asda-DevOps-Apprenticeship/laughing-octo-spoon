@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "app"
+version = "0.0.1"
+description = "Adobe Real-Time Customer Data Platform Deployment"
+authors = ["Farai Wande"]
+
+
+[tool.poetry.dependencies]
+python = "3.11"
+Flask = "^2.2.5"
+
+
+
+
+
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

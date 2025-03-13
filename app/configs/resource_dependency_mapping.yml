@@ -1,0 +1,8 @@
+---
+field_groups: []
+schemas:
+  - 'field_groups'
+  - 'classes'
+datasets:
+ - 'schemas'
+namespaces: []
