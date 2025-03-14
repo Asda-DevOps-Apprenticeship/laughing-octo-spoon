@@ -6,8 +6,16 @@ authors = ["Farai Wande"]
 
 
 [tool.poetry.dependencies]
-python = "3.11"
+python = "3.11.11"
 Flask = "^2.2.5"
+pytest = "^8.3.5"
+pyspark = "^3.4.0"
+databricks-sql-connector = "^4.0.0"
+pyyaml = "^6.0.2"
+psycopg2 = "^2.9.10"
+flask-sqlalchemy = "^3.1.1"
+databricks = "^0.2"
+databricks-connect="16.1.1"
 
 
 
@@ -15,5 +23,5 @@ Flask = "^2.2.5"
 
 
 [build-system]
-requires = ["poetry>=0.12"]
-build-backend = "poetry.masonry.api"
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
