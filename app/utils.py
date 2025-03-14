@@ -14,7 +14,6 @@ import time
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 from psycopg2 import extras
-# from pyspark.sql import SparkSession
 from databricks.connect import DatabricksSession
 from databricks.sdk.core import Config as DatabricksConfig
 from delta.tables import DeltaTable
